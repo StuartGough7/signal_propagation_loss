@@ -1,0 +1,12 @@
+1. Install Anaconda
+2. Create a form using QT designer/creator
+3. Save the '''''.ui file somewhere you can find it
+4. Search the Anaconda files // Python35 etc files for the location of pyuic5.bat (could be pyuic6.bat at the time)
+5. Go to save location of .ui file and hold shift+rightclick. Open command window here (opening cmd at current location)
+6. Run the Command(Or slighlty diffeernt depending): 
+
+C:\Anaconda\Library\bin\pyuic5 -x Insertname.ui -o Outputname.py
+
+7. Change Insertname and output name appropriately.
+
+What a ballache I know trustme

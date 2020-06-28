@@ -1,0 +1,70 @@
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(336, 316)
+        font = QtGui.QFont()
+        font.setBold(False)
+        font.setWeight(50)
+        MainWindow.setFont(font)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(20, 40, 131, 16))
+        self.label.setObjectName("label")
+        self.label_2 = QtWidgets.QLabel(self.centralwidget)
+        self.label_2.setGeometry(QtCore.QRect(20, 70, 131, 16))
+        self.label_2.setObjectName("label_2")
+        self.label_3 = QtWidgets.QLabel(self.centralwidget)
+        self.label_3.setGeometry(QtCore.QRect(50, 110, 101, 16))
+        self.label_3.setObjectName("label_3")
+        self.label_4 = QtWidgets.QLabel(self.centralwidget)
+        self.label_4.setGeometry(QtCore.QRect(60, 140, 91, 16))
+        self.label_4.setObjectName("label_4")
+        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton.setGeometry(QtCore.QRect(120, 220, 91, 31))
+        font = QtGui.QFont()
+        font.setBold(True)
+        font.setWeight(75)
+        self.pushButton.setFont(font)
+        self.pushButton.setObjectName("pushButton")
+        self.TransFile = QtWidgets.QLineEdit(self.centralwidget)
+        self.TransFile.setGeometry(QtCore.QRect(160, 40, 113, 20))
+        self.TransFile.setObjectName("TransFile")
+        self.RecFile = QtWidgets.QLineEdit(self.centralwidget)
+        self.RecFile.setGeometry(QtCore.QRect(160, 70, 113, 20))
+        self.RecFile.setObjectName("RecFile")
+        self.NoTrans = QtWidgets.QLineEdit(self.centralwidget)
+        self.NoTrans.setGeometry(QtCore.QRect(160, 110, 113, 20))
+        self.NoTrans.setObjectName("NoTrans")
+        self.NoRec = QtWidgets.QLineEdit(self.centralwidget)
+        self.NoRec.setGeometry(QtCore.QRect(160, 140, 113, 20))
+        self.NoRec.setObjectName("NoRec")
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "SPLAT Auto Ver1.0"))
+        self.label.setText(_translate("MainWindow", "Please Select Transmit File:"))
+        self.label_2.setText(_translate("MainWindow", "Please Select Receiver File:"))
+        self.label_3.setText(_translate("MainWindow", "No. of Transmitters:"))
+        self.label_4.setText(_translate("MainWindow", "No. of Receivers:"))
+        self.pushButton.setText(_translate("MainWindow", "Start"))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())
+
